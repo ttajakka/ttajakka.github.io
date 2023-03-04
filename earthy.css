@@ -60,8 +60,9 @@ body {
 	
 	#info {
 		height: 230px;
-		font-size: 1.2em;
+		font-size: 1.15em;
 	}
+
 
 	#face {
 		float: right;
@@ -86,7 +87,7 @@ body {
 	}
 
 	#info {
-		font-size: 3.5vw;
+		font-size: 3.1vw;
 	}
 
 	#face {
@@ -109,7 +110,7 @@ body {
 	}
 
 	#info {
-		font-size: 3.8vw;
+		font-size: 3.1vw;
 	}
 
 	#face {
