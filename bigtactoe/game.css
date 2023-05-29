@@ -1,0 +1,138 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(45, 47, 51);
+  /* background-color: white; */
+  color: rgb(212, 207, 200);
+  font-family: Raleway, sans-serif;
+}
+
+#mainbox {
+  margin: auto;
+  width: 1100px;
+  height: 100%;
+}
+
+#gamebox {
+  /* margin: auto; */
+  /* width: 900px; */
+  float: left;
+  z-index: 9;
+}
+
+#maintitle {
+  /* text-align: center; */
+  font-size: 60px;
+  /* margin-top: 15px; */
+  margin-bottom: 5px;
+  margin-left: 21px;
+}
+
+#newgame {
+  font-size: 30px;
+  width: 200px;
+  font-family: Raleway, sans-serif;
+  background-color: antiquewhite;
+  margin-top: 24px;
+  border: 0px;
+  padding: 10px;
+}
+
+#newgame:active {
+  background-color: rgb(146, 156, 170);
+}
+
+#instruction {
+  /* text-align: center; */
+  float: left;
+  font-size: 30px;
+  margin-top: 17px;
+  margin-bottom: 10px;
+}
+
+#bigtable {
+  /* border-collapse: collapse; */
+  /* border: 1px solid rgb(146, 156, 170); */
+  /* background-color: antiquewhite; */
+  border-spacing: 15px;
+}
+
+.squarebox {
+  border: 10px solid rgb(45, 47, 51);
+  border-radius: 10px;
+  padding: 0;
+}
+
+.square {
+  /* border: 10px solid rgb(45, 47, 51); */
+  /* border: 10px solid red; */
+  border-collapse: collapse;
+
+}
+
+.playable {
+  border-radius: 10px;
+  border-color: rgb(194, 111, 55);
+}
+
+.row {
+  margin: 0;
+}
+
+.node {
+  height: 80px;
+  width: 80px;
+
+  font-size: 65px;
+  text-align: center;
+
+  margin: 0;
+
+  /* border: 1px solid black; */
+}
+
+.even {
+  background-color: rgb(146, 156, 170);
+}
+
+.odd {
+  background-color: antiquewhite;
+}
+
+.cross {
+  color: rgb(57, 17, 202);
+}
+
+.naught {
+  color: green;
+}
+
+/* .active.even {
+  background-color: rgb(253, 81, 253);
+}
+
+.active.odd {
+  background-color: violet;
+} */
+
+.node-cross.even {
+  background-color: rgb(110, 143, 252);
+}
+
+.node-cross.odd {
+  background-color: rgb(173, 192, 253);
+}
+
+.node-naught.even {
+  background-color: rgb(115, 252, 110);
+}
+
+.node-naught.odd {
+  background-color: rgb(209, 253, 173);
+}
+
+.last {
+  background-color: goldenrod !important; 
+}
