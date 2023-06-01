@@ -4,7 +4,6 @@
 
 body {
   background-color: rgb(45, 47, 51);
-  /* background-color: white; */
   color: rgb(212, 207, 200);
   font-family: Raleway, sans-serif;
 }
@@ -30,7 +29,13 @@ body {
   margin-left: 21px;
 }
 
-#newgame {
+#newgametitle {
+  font-size: 40px;
+  margin-top: 14px;
+  margin-bottom: 0;
+}
+
+.newgamebutton {
   font-size: 30px;
   width: 200px;
   font-family: Raleway, sans-serif;
@@ -40,12 +45,20 @@ body {
   padding: 10px;
 }
 
-#newgame:active {
+.newgamebutton:hover {
   background-color: rgb(146, 156, 170);
 }
 
+.newgamebutton:active {
+  background-color: antiquewhite;
+}
+
+#modeinfo {
+  margin-top: 20px;
+  font-size: 25px;
+}
+
 #instruction {
-  /* text-align: center; */
   float: left;
   font-size: 30px;
   margin-top: 17px;
@@ -53,44 +66,36 @@ body {
 }
 
 #bigtable {
-  /* border-collapse: collapse; */
-  /* border: 1px solid rgb(146, 156, 170); */
-  /* background-color: antiquewhite; */
   border-spacing: 15px;
 }
 
-.squarebox {
+/* .squarebox {
   border: 10px solid rgb(45, 47, 51);
   border-radius: 10px;
   padding: 0;
-}
+} */
 
 .square {
-  /* border: 10px solid rgb(45, 47, 51); */
-  /* border: 10px solid red; */
   border-collapse: collapse;
-
 }
 
-.playable {
+/* .playable {
   border-radius: 10px;
   border-color: rgb(194, 111, 55);
-}
+} */
 
 .row {
   margin: 0;
 }
 
 .node {
-  height: 80px;
-  width: 80px;
+  height: 90px;
+  width: 90px;
 
   font-size: 65px;
   text-align: center;
 
   margin: 0;
-
-  /* border: 1px solid black; */
 }
 
 .even {
@@ -109,14 +114,6 @@ body {
   color: green;
 }
 
-/* .active.even {
-  background-color: rgb(253, 81, 253);
-}
-
-.active.odd {
-  background-color: violet;
-} */
-
 .node-cross.even {
   background-color: rgb(110, 143, 252);
 }
@@ -126,13 +123,31 @@ body {
 }
 
 .node-naught.even {
-  background-color: rgb(115, 252, 110);
+  background-color: rgb(66, 163, 79);
 }
 
 .node-naught.odd {
-  background-color: rgb(209, 253, 173);
+  background-color: rgb(94, 201, 94);
+}
+
+.active.even {
+  background: rgb(146, 156, 170);
+  background: radial-gradient(
+    circle,
+    rgb(146, 156, 170) 0%,
+    rgba(252, 70, 107, 1) 300%
+  );
+}
+
+.active.odd {
+  background: rgb(146, 156, 170);
+  background: radial-gradient(
+    circle,
+    antiquewhite 0%,
+    rgb(247, 56, 23) 300%
+  );
 }
 
 .last {
-  background-color: goldenrod !important; 
+  background-color: goldenrod !important;
 }
