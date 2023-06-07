@@ -1,34 +1,25 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <title>Big Tac Toe</title>
-    <link rel="icon" type="image/x-icon" href="images/tic-tac-toe-icon.svg" />
-    <link rel="stylesheet" type="text/css" href="game.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Raleway:wght@800&display=swap"
-      rel="stylesheet"
-    />
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="images/tic-tac-toe-icon.svg" />
+    <link rel="stylesheet" type="text/css" href="./styles/game-v0.3.css" />
+    <script type="module" src="game.js"></script>
   </head>
   <body>
-    <div id="mainbox">
-      <div id="leftcol">
-        <h1 id="maintitle">BIG TAC TOE</h1>
-        <div id="gamebox"></div>
+    <div class="container">
+      <h1 id="maintitle">BIG TAC TOE</h1>
+      <div class="box" id="box"></div>
+      <div id="newgamebuttons">
+        <h3>New game</h3>
+        <button id="newgame">Normal</button>
+        <button id="newreversegame">Reversed</button>
       </div>
-      <div id="rightcol">
-        <div id="menu">
-          <h2 id="newgametitle">new game</h2>
-          <button id="newnormal" class="newgamebutton">normal</button>
-          <button id="newreverse" class="newgamebutton">reversed</button>
-        </div>
+      <div id="information">
+        <h3 id="instruction"></h3>
         <div id="modeinfo"></div>
-        <div id="instruction"></div>
       </div>
+
     </div>
-    <script type="module" src="game.js"></script>
   </body>
 </html>

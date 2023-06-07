@@ -106,14 +106,12 @@ export class Game {
   }
 
   squareDecided({ xsmall, ysmall }) {
-    // if (this.squareFull({ xsmall, ysmall })) return true;
-    // if (this.squareWon({ xsmall, ysmall })) return true;
-    // return false;
     return this.decided[xsmall][ysmall];
   }
 
   isLegal(move) {
     if (this.moves.length === 0) return true;
+    if (this.ended()) return false;
     if (this.bigstate[move.x][move.y]) {
       return false;
     }
@@ -127,6 +125,20 @@ export class Game {
     return this.testForWin(this.smallstate);
   }
 
+  draw() {
+    if (this.victory()) return false;
+    for (let xsmall = 0; xsmall < 3; xsmall++) {
+      for (let ysmall = 0; ysmall < 3; ysmall++) {
+        if (!this.squareDecided({ xsmall, ysmall })) return false;
+      }
+    }
+    return true;
+  }
+
+  ended() {
+    return this.victory() || this.draw()
+  }
+
   log() {
     console.log(this);
   }
@@ -138,15 +150,37 @@ export class NormalGame extends Game {
     this.variant = "normal";
   }
 
-  // getNextSquare() {
-  //   const last = this.getLast();
-  //   return { xsmall: last.x % 3, ysmall: last.y % 3 };
-  // }
+  getNextSquare() {
+    const last = this.getLast();
+    return { xsmall: last.x % 3, ysmall: last.y % 3 };
+  }
 
   moveInNextSquare(move) {
     const { x, y } = this.getLast();
     const { xsmall, ysmall } = move.getSmallCoords();
     return x % 3 === xsmall && y % 3 === ysmall;
+  }
+
+  getActiveSquares() {
+    const active = [
+      [false, false, false],
+      [false, false, false],
+      [false, false, false],
+    ];
+    const { xsmall, ysmall } = this.getNextSquare();
+    if (!this.squareDecided({ xsmall, ysmall })) {
+      active[xsmall][ysmall] = true;
+      return active;
+    } else {
+      for (let i = 0; i < 3; i++) {
+        for (let j = 0; j < 3; j++) {
+          if (!this.squareDecided({ xsmall: i, ysmall: j })) {
+            active[i][j] = true;
+          }
+        }
+      }
+      return active;
+    }
   }
 
   isLegal(move) {

@@ -1,0 +1,177 @@
+#maintable {
+  border-collapse: collapse;
+
+  position: absolute;
+  top: 0%;
+
+  width: 100%;
+  height: 100%;
+  /* z-index: 8; */
+}
+
+.overlaytable {
+  pointer-events: none;
+  border-collapse: collapse;
+
+  position: absolute;
+  top: 0%;
+  left: 0%;
+
+  width: 100%;
+  height: 100%;
+
+  text-align: center;
+
+  border: 0;
+  z-index: 9;
+}
+
+.maintd,
+.oltd {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  height: 33.33%;
+  width: 33.33%;
+  font-size: 25cqw;
+}
+
+.maintd {
+  z-index: 9;
+}
+
+.oltd {
+  opacity: 70%;
+  z-index: 9;
+}
+
+.oltd.cross {
+  color: darkblue;
+}
+
+.oltd.naught {
+  color: darkgreen;
+}
+
+.bg {
+  position: absolute;
+  height: 94%;
+  width: 94%;
+  top: 3%;
+  left: 3%;
+  /* z-index: 9; */
+  /* border: 0.4cqw solid rgb(143, 143, 143); */
+  border-radius: 2cqw;
+  background-color: white;
+  /* opacity: 50%; */
+}
+
+.bg.cross {
+  background-color: lightblue;
+  border-color: rgb(117, 117, 252);
+}
+
+.bg.naught {
+  background-color: rgb(128, 236, 106);
+  border-color: green;
+}
+
+/* .bg.active {
+  border: 0.6cqw solid rgb(201, 42, 36);
+} */
+
+.square {
+  position: relative;
+  z-index: 8;
+  height: 100%;
+  text-align: center;
+  container-type: size;
+  /* background-color: white; */
+}
+
+.tdborder {
+  pointer-events: none;
+  position: absolute;
+  height: 94%;
+  width: 94%;
+  top: 3%;
+  left: 3%;
+  z-index: 9;
+  border: 0.4cqw solid rgb(143, 143, 143);
+  border-radius: 2cqw;
+}
+
+.maintd.active > .tdborder {
+  border: 0.6cqw solid rgb(187, 75, 0);
+}
+
+.table {
+  border-collapse: collapse;
+  position: relative;
+  top: 3%;
+  left: 3%;
+
+  width: 94%;
+  height: 94%;
+}
+
+.td {
+  position: relative;
+  font-size: 23cqw;
+  margin: 0;
+  padding: 0;
+  border: 0.6cqw solid rgb(145, 145, 145);
+  height: 33.33%;
+  width: 33.33%;
+}
+
+.tddiv {
+  position: relative;
+  z-index: 9;
+}
+
+.tddiv.cross {
+  color: rgb(0, 0, 119);
+}
+
+.tddiv.naught {
+  color: rgb(35, 87, 0);
+}
+
+.tdbg {
+  position: absolute;
+  height: 84%;
+  width: 84%;
+  top: 8%;
+  left: 8%;
+  
+  z-index: 1;
+  border-radius: 5cqw;
+}
+
+.tdbg.active {
+  border: 1cqw solid rgb(250, 179, 177);
+  background-color: rgb(252, 214, 213);
+}
+
+.tdbg.last {
+  opacity: 50%;
+  background-color: rgb(175, 160, 149);
+}
+
+.td-top {
+  border-top: 0;
+}
+
+.td-bottom {
+  border-bottom: 0;
+}
+
+.td-left {
+  border-left: 0;
+}
+
+#maintd02,
+.td-right {
+  border-right: 0;
+}
